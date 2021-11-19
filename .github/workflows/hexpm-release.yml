@@ -26,8 +26,11 @@ jobs:
         with:
           path: README.md,doc/API.md
 
-      - run: |
+      - name: Postprocess links
+        run: |
           mv README.html doc/index.html
+          sed -i 's| href="API.html#| href="API.html#user-content-|g' doc/index.html
+          sed -i 's| href="#| href="#user-content-|g' doc/API.html
 
       - name: Publish to hex.pm
         run: DEBUG=1 rebar3 hex publish --repo hexpm --yes
