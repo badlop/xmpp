@@ -22,9 +22,9 @@
 %%%
 %%%-------------------------------------------------------------------
 
-{application, xmpp,
- [{description,  "Erlang/Elixir XMPP parsing and serialization library"},
-  {vsn,          "1.5.4"},
+{application, cttest,
+ [{description,  "TEST TEST TEST library"},
+  {vsn,          "6.0.8"},
   {modules,      []},
   {registered,   []},
   {applications, [kernel, stdlib, ezlib, fast_tls, fast_xml, idna, p1_utils, stringprep]},
